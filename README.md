@@ -15,7 +15,7 @@
     A configurable clock widget
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://sariel.pl/ringclock/">View Demo</a>
   </p>
 </div>
 
@@ -35,52 +35,43 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About
 
 The RingClock is a simple SVG-based widget for your website. The idea, inspired by smartwatch faces,
 is that except for the central watch face the date and time are visualized by circular rings around
-the face - each with tracking of the current progress and individually configurable color.
+the face - each with tracking of the current progress and individually configurable color. The clock
+works in realtime, with continually updated rings progress and watch face.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+Pros:
+* Ease of use - just add the ID to an element where you want to display the clock
+* Flexible configuration - change the color of any ring + ring thickness + watch face CSS attributes
+* Minimum configuration required - you can launch the clock without touching configuration, the
+dimensions will be inherited from the container and default configuration will be used
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+## Usage
 
 ### Prerequisites
+
+The script requires a container element (e.g. a div) and the jQuery library (at least 1.9.1 version).
+
+For example:
+
+```
+<body>
+
+  <div id="ringclock" style="width: 350px; height: 350px;"></div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="ringclock.js"></script>
+```
+
+### Prerequisites
+
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
