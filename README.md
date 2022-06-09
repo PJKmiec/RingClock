@@ -41,12 +41,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About
 
-The RingClock is a simple SVG-based widget for your website. The idea, inspired by smartwatch faces, is that except for the central watch face the date and time are visualized by circular rings around the face - each with tracking of the current progress and individually configurable color. The clock works in realtime, with continually updated rings progress and watch face.
+The RingClock is a simple SVG-based widget for your website. The idea, inspired by smartwatch faces, is that except for the central watch face, the date and time are additionally visualized by circular rings around the face - each with tracking of the current "progress" (e.g. day of month VS month's length) and individually configurable color. The clock works in realtime, with continually updated rings progress and watch face.
 
-Pros:
+**Pros:**
 * Ease of use - just add the ID to an element where you want to display the clock
 * Flexible configuration - change the color of any ring + ring thickness + watch face CSS attributes
-* Minimum configuration required - you can launch the clock without touching configuration, the dimensions will be inherited from the container and default configuration will be used
+* Minimum configuration required - you can launch the clock without touching the configuration, the dimensions will be inherited from the container and default configuration will be used
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -59,15 +59,17 @@ The script requires a container element (e.g. a div) and the jQuery library (at 
 
 ### Usage
 
-1. Include style.css in your <head></head>
+1. Include style.css in your document's head tag
 2. Add "ringclock" ID to the container element on your website; the container's dimensions determine clock's dimensions
-3. Include jQuery library after the </body> tag
+3. Include jQuery library after the body tag
 4. Include the clock JS script after the jQuery library
 
 For example:
 
 ```
-<body>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head><body>
   <div id="ringclock" style="width: 350px; height: 350px;"></div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -100,7 +102,7 @@ var ringColors = {month: '#fadafa', day: '#f7c1f7', hour: '#f3a8f3', minute: '#f
 ```
 Where:
 * **timeFormat** controls which rings are shown and in what order (outermost ring first, innermost ring last)
-* **strokeWidth** controls the thickness of every single ring as well as spacing between them
+* **strokeWidth** controls the thickness of every single ring as well as spacing between rings
 * **ringColors** provide color values for all rings as well as background color which is used for the empty circles that the rings fill
 
 ### Examples
