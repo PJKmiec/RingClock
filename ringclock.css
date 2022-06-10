@@ -1,0 +1,15 @@
+/* clock face */
+#date, #day {text-transform: uppercase;}
+#date {font-size: 10px; fill: #f3a8f3}
+#time {font-size: 24px; fill: #8f4e8f}
+#day {font-size: 12px; fill: #ee82ee}
+text {text-anchor: middle;}
+
+/* clock rings */
+circle {stroke: #fdf3fd; fill: none;}
+path {transition: 0.2s; fill: none; stroke-linecap: round;}
+path#months {stroke: #fadafa;}
+path#days {stroke: #f7c1f7;}
+path#hours {stroke: #f3a8f3;}
+path#minutes {stroke: #f08ff0;}
+path#seconds {stroke: #d675d6;}

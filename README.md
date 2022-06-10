@@ -81,29 +81,37 @@ For example:
 
 ## Configuration
 
-For simplicity, the watch face can be customized using the style.css file while the rings can be customized using the configuration included at the beginning of the ringclock.js file.
+Most configuration can be done with the ringclock.css file, and some is available at the beginning of the ringclock.js file.
 
-The default style.css file looks as follows, where #date is the line displaying day of month, month name and year, #time is the line displaying hours, minutes and seconds, and #day is the line displaying day of the week:
+The default ringclock.css file looks as follows, where #date is the line displaying day of month, month name and year, #time is the line displaying hours, minutes and seconds, and #day is the line displaying day of the week:
 
   ```
   #date, #day {text-transform: uppercase;}
   #date {font-size: 10px; fill: #f3a8f3}
   #time {font-size: 24px; fill: #8f4e8f}
   #day {font-size: 12px; fill: #ee82ee}
+  text {text-anchor: middle;}
+
+  /* clock rings */
+  circle {stroke: #fdf3fd; fill: none;}
+  path {transition: 0.2s; fill: none; stroke-linecap: round;}
+  path#months {stroke: #fadafa;}
+  path#days {stroke: #f7c1f7;}
+  path#hours {stroke: #f3a8f3;}
+  path#minutes {stroke: #f08ff0;}
+  path#seconds {stroke: #d675d6;}
   ```
-_It's important to remember that "fill" values have to be used without quote marks; you can use textual values, hex values or rgba values here_
+_Note: "fill" values have to be used without quote marks; you can use textual values, hex values or rgba values here. Also, you shouldn't change the text-anchor value_
 
 The default configuration in the ringclock.js file looks as follows:
 
 ```
 var timeFormat = ['month', 'day', 'hour', 'minute', 'second'];
 var strokeWidth = 10;
-var ringColors = {month: '#fadafa', day: '#f7c1f7', hour: '#f3a8f3', minute: '#f08ff0', second: '#d675d6', background: '#fdf3fd'};
 ```
 Where:
 * **timeFormat** controls which rings are shown and in what order (outermost ring first, innermost ring last)
 * **strokeWidth** controls the thickness of every single ring as well as spacing between rings
-* **ringColors** provide color values for all rings as well as background color which is used for the empty circles that the rings fill
 
 ### Examples
 

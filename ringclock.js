@@ -3,7 +3,7 @@ $(document).ready(function () {
 	// ---------------- CONFIG ----------------
 	var timeFormat = ['month', 'day', 'hour', 'minute', 'second']; // which rings are present and in what order (outside first, inside last)
 	var strokeWidth = 10; // width of a ring and spacing between rings
-	var ringColors = {month: '#fadafa', day: '#f7c1f7', hour: '#f3a8f3', minute: '#f08ff0', second: '#d675d6', background: '#fdf3fd'}; // colors of rings
+
 	// ---------------- CONFIG ----------------
 
 	// -------- THERE BE DRAGONS BELOW --------
@@ -86,14 +86,14 @@ $(document).ready(function () {
 	// draw circles and rings
 	for (let i = 0; i < timeFormat.length; i++) {
 		let type = timeFormat[i];
-		$("#ringclock svg").append('<circle cx="' + center.x + '" cy="' + center.y + '" r="' + (maxRadius - (i + i) * strokeWidth) + '" stroke="' + ringColors.background + '" stroke-width="' + strokeWidth + '" fill="none" />');
-		$("#ringclock svg").append('<path id="' + type + 's" fill="none" stroke="' + ringColors[type] + '" stroke-width="' + strokeWidth + '" stroke-linecap="round" />');
+		$("#ringclock svg").append('<circle cx="' + center.x + '" cy="' + center.y + '" r="' + (maxRadius - (i + i) * strokeWidth) + '" stroke-width="' + strokeWidth + '"/>');
+		$("#ringclock svg").append('<path id="' + type + 's" stroke-width="' + strokeWidth + '" />');
 	}
 
 	// create clock face
-	$("#ringclock svg").append('<text id="date" x="' + center.x + '" y="' + (center.y - 16) + '" text-anchor="middle"></text>');
-	$("#ringclock svg").append('<text id="time" x="' + center.x + '" y="' + (center.y + 8) + '" text-anchor="middle" fill="' + ringColors.minute + '"></text>');
-	$("#ringclock svg").append('<text id="day" x="' + center.x + '" y="' + (center.y + 24) + '" text-anchor="middle" fill="' + ringColors.second + '"></text>');
+	$("#ringclock svg").append('<text id="date" x="' + center.x + '" y="' + (center.y - 16) + '"></text>');
+	$("#ringclock svg").append('<text id="time" x="' + center.x + '" y="' + (center.y + 8) + '"></text>');
+	$("#ringclock svg").append('<text id="day" x="' + center.x + '" y="' + (center.y + 24) + '"></text>');
 
 	$("#ringclock").html($("#ringclock").html()); // forcibly refresh SVG elements
 
